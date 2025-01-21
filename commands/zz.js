@@ -19,7 +19,12 @@ export default async event => {
     // 一到六時間
     const FirstTime = ZhongZhengTemp.Time[0].DataTime
     const FirstDate = new Date(FirstTime)
-    const showFirstTime = `${String(FirstDate.getHours() + 8).padStart(2, '0')}:${String(FirstDate.getMinutes()).padStart(2, '0')}`
+    const showFirstTime = FirstDate.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei', // 指定台灣時區
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false // 使用 24 小時制
+    })
     const SecondTime = ZhongZhengTemp.Time[1].DataTime
     const SecondDate = new Date(SecondTime)
     const showSecondTime = `${String(SecondDate.getHours() + 8).padStart(2, '0')}:${String(SecondDate.getMinutes()).padStart(2, '0')}`
