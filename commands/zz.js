@@ -27,19 +27,44 @@ export default async event => {
     })
     const SecondTime = ZhongZhengTemp.Time[1].DataTime
     const SecondDate = new Date(SecondTime)
-    const showSecondTime = `${String(SecondDate.getHours() + 8).padStart(2, '0')}:${String(SecondDate.getMinutes()).padStart(2, '0')}`
+    const showSecondTime = SecondDate.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    })
     const ThirdTime = ZhongZhengTemp.Time[2].DataTime
     const ThirdDate = new Date(ThirdTime)
-    const showThirdTime = `${String(ThirdDate.getHours() + 8).padStart(2, '0')}:${String(ThirdDate.getMinutes()).padStart(2, '0')}`
+    const showThirdTime = ThirdDate.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    })
     const ForthTime = ZhongZhengTemp.Time[3].DataTime
     const ForthDate = new Date(ForthTime)
-    const showForthTime = `${String(ForthDate.getHours() + 8).padStart(2, '0')}:${String(ForthDate.getMinutes()).padStart(2, '0')}`
+    const showForthTime = ForthDate.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    })
     const FifthTime = ZhongZhengTemp.Time[4].DataTime
     const FifthDate = new Date(FifthTime)
-    const showFifthTime = `${String(FifthDate.getHours() + 8).padStart(2, '0')}:${String(FifthDate.getMinutes()).padStart(2, '0')}`
+    const showFifthTime = FifthDate.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    })
     const SixthTime = ZhongZhengTemp.Time[5].DataTime
     const SixthDate = new Date(SixthTime)
-    const showSixthTime = `${String(SixthDate.getHours() + 8).padStart(2, '0')}:${String(SixthDate.getMinutes()).padStart(2, '0')}`
+    const showSixthTime = SixthDate.toLocaleString('zh-TW', {
+      timeZone: 'Asia/Taipei',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    })
 
     const result = await event.reply(
       showFirstTime + '時，攝氏' + ZhongZhengFirstTemp + '度\n' +
