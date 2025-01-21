@@ -19,22 +19,22 @@ export default async event => {
     // 一到六時間
     const FirstTime = ZhongZhengTemp.Time[0].DataTime
     const FirstDate = new Date(FirstTime)
-    const showFirstTime = `${String(FirstDate.getHours()).padStart(2, '0')}:${String(FirstDate.getMinutes()).padStart(2, '0')}`
+    const showFirstTime = `${String(FirstDate.getHours() + 8).padStart(2, '0')}:${String(FirstDate.getMinutes()).padStart(2, '0')}`
     const SecondTime = ZhongZhengTemp.Time[1].DataTime
     const SecondDate = new Date(SecondTime)
-    const showSecondTime = `${String(SecondDate.getHours()).padStart(2, '0')}:${String(SecondDate.getMinutes()).padStart(2, '0')}`
+    const showSecondTime = `${String(SecondDate.getHours() + 8).padStart(2, '0')}:${String(SecondDate.getMinutes()).padStart(2, '0')}`
     const ThirdTime = ZhongZhengTemp.Time[2].DataTime
     const ThirdDate = new Date(ThirdTime)
-    const showThirdTime = `${String(ThirdDate.getHours()).padStart(2, '0')}:${String(ThirdDate.getMinutes()).padStart(2, '0')}`
+    const showThirdTime = `${String(ThirdDate.getHours() + 8).padStart(2, '0')}:${String(ThirdDate.getMinutes()).padStart(2, '0')}`
     const ForthTime = ZhongZhengTemp.Time[3].DataTime
     const ForthDate = new Date(ForthTime)
-    const showForthTime = `${String(ForthDate.getHours()).padStart(2, '0')}:${String(ForthDate.getMinutes()).padStart(2, '0')}`
+    const showForthTime = `${String(ForthDate.getHours() + 8).padStart(2, '0')}:${String(ForthDate.getMinutes()).padStart(2, '0')}`
     const FifthTime = ZhongZhengTemp.Time[4].DataTime
     const FifthDate = new Date(FifthTime)
-    const showFifthTime = `${String(FifthDate.getHours()).padStart(2, '0')}:${String(FifthDate.getMinutes()).padStart(2, '0')}`
+    const showFifthTime = `${String(FifthDate.getHours() + 8).padStart(2, '0')}:${String(FifthDate.getMinutes()).padStart(2, '0')}`
     const SixthTime = ZhongZhengTemp.Time[5].DataTime
     const SixthDate = new Date(SixthTime)
-    const showSixthTime = `${String(SixthDate.getHours()).padStart(2, '0')}:${String(SixthDate.getMinutes()).padStart(2, '0')}`
+    const showSixthTime = `${String(SixthDate.getHours() + 8).padStart(2, '0')}:${String(SixthDate.getMinutes()).padStart(2, '0')}`
 
     const result = await event.reply(
       showFirstTime + '時，攝氏' + ZhongZhengFirstTemp + '度\n' +
